@@ -1,12 +1,18 @@
 {
   "devDependencies": {
     "@types/node": "^22.7.4",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "@octokit/rest": "^21.0.2",
     "dotenv": "^16.4.5",
     "mongodb": "^6.9.0",
-    "octokit": "^4.0.2",
-    "ts-node": "^10.9.2"
-  }
+    "octokit": "^4.0.2"
+  },
+  "scripts": {
+    "dev": "npx nodemon ./src/main.ts"
+  },
+  "type": "module"
 }
