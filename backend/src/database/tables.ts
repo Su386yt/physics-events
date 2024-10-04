@@ -1,14 +1,12 @@
 import Event from './event';
-import * as fs from "fs";
 
-const FOLDER_PATH = "../tables/"
+const FOLDER_PATH = "data/events/"
 const TABLE_PREFIX = "table_"
 
 let table = new Map<string, Event[]>()
 
 
 export function loadTables() {
-
 
 }
 
