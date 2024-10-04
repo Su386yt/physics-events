@@ -1,20 +1,22 @@
 import Event from './event';
+import EventHost from "./eventhost";
 
 const FOLDER_PATH = "data/events/"
 const TABLE_PREFIX = "table_"
 
-let table = new Map<string, Event[]>()
+export let idHostMap = new Map<string, EventHost>
+export let table = new Map<EventHost, Event[]>()
 
 
 export function loadTables() {
-
+    
 }
 
 export function saveTables() {
 
 }
 
-export function updateTable(organizer: string, events: Event[]): Event[] {
+export function updateTable(organizer: EventHost, events: Event[]): Event[] {
     // Remove all the past events
     let trimedEvents: Event[] = []
     for (const event of events) {
@@ -44,7 +46,7 @@ export function updateTable(organizer: string, events: Event[]): Event[] {
     return combinedEvents
 }
 
-export function getEvents(organizer: string): Event[] {
+export function getEvents(organizer: EventHost): Event[] {
     return table.get(organizer) ?? []
 }
 
